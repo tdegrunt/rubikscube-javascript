@@ -1,0 +1,59 @@
+body {
+	background: #000;
+	font-family: helvetica;
+	font-size: 9px;
+}
+
+.cube {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.fc {
+  overflow: hidden;
+}			
+
+.fc.u {
+  -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+  -moz-transform: rotate(-45deg) skew(15deg, 15deg);
+}
+
+.fc.l {
+  -webkit-transform: rotate(15deg) skew(15deg, 15deg);
+  -moz-transform: rotate(15deg) skew(15deg, 15deg);
+}
+
+.fc.f {
+  -webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
+  -moz-transform: rotate(-15deg) skew(-15deg, -15deg);
+}
+
+.fc.d {
+  -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+  -moz-transform: rotate(-45deg) skew(15deg, 15deg);
+}	
+		
+.fc.b {
+  -webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
+  -moz-transform: rotate(-15deg) skew(-15deg, -15deg);
+}
+
+.fc.r {
+  -webkit-transform: rotate(15deg) skew(15deg, 15deg);
+  -moz-transform: rotate(15deg) skew(15deg, 15deg);
+}
+
+.c {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #000;
+}
+
+.fc > .c.b { background-color: #0d00d4; }
+.fc > .c.r { background-color: #ff0010; }
+.fc > .c.w { background-color: #ffffff; }
+.fc > .c.g { background-color: #1cd900; }
+.fc > .c.y { background-color: #fff500; }
+.fc > .c.o { background-color: #ff8f00; }

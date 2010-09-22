@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rubik's Cube</title>
+		<link rel="stylesheet" href="rubikscube.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="rubikscube.js"></script>
+		<script type="text/javascript">
+			var rubiks = new Cube({
+				'back':  new Matrix([['r','r','r'],['r','r','r'],['r','r','r']]),
+				'right': new Matrix([['g','g','g'],['g','g','g'],['g','g','g']]),
+				'up':    new Matrix([['y','y','y'],['y','y','y'],['y','y','y']]),
+				'down':  new Matrix([['o','o','o'],['o','o','o'],['o','o','o']]),
+				'left':  new Matrix([['w','w','w'],['w','w','w'],['w','w','w']]),
+				'front': new Matrix([['b','b','b'],['b','b','b'],['b','b','b']])
+			});
+
+			$(window).load(function(){
+				$('#cube').replaceWith(rubiks.html());
+				rubiks.turn('front',1);
+				$('#cube').replaceWith(rubiks.html());
+			});
+		</script>
+	</head>
+	<body>
+		<div id="cube" class="cube"></div>
+	</body>
+</html>
