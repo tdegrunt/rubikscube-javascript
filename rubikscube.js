@@ -28,9 +28,6 @@ Matrix.prototype = {
 	}
 };
 
-var tileWidth = 51;
-var tileHeight = 89;
-
 var Cube = function(faces) {
 	this.faces = faces;
 	this.short = { 'l': 'left',	'r': 'right',	'u': 'up', 'd': 'down',	'f': 'front',	'b': 'back'	};
@@ -44,9 +41,6 @@ var Cube = function(faces) {
 	};
 };
 
-/*
- * http://peter.stillhq.com/jasmine/rubikscubesolution.html
- */
 Cube.prototype = {
 	html: function() {
 		var html = '<div id="cube" class="cube">';
@@ -99,6 +93,7 @@ Cube.prototype = {
 	turn: function(face, turns) {
 		
 		var actions = this.turns[face];
+
 		for(var j=0; j<Math.abs(turns);j++) {
 			if(turns < 0) {
 				var dup = this.get(actions[actions.length-1]);
@@ -128,6 +123,13 @@ Cube.prototype = {
 				
 			}
 		}
+	},
+	move: function(movements) {
+	  var that = this;
+    movements.split(',').forEach(function(movement){
+      var nrOfTurns = movement.slice(1);
+      that.turn(that.short[movement[0]], nrOfTurns);
+    });
 	},
 	get: function(command) {
 		var cmd = {

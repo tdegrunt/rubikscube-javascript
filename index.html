@@ -7,17 +7,17 @@
 		<script type="text/javascript" src="rubikscube.js"></script>
 		<script type="text/javascript">
 			var rubiks = new Cube({
-				'back':  new Matrix([['r','r','r'],['r','r','r'],['r','r','r']]),
+				'back':  new Matrix([['w','w','w'],['w','w','w'],['w','w','w']]),
 				'right': new Matrix([['g','g','g'],['g','g','g'],['g','g','g']]),
-				'up':    new Matrix([['y','y','y'],['y','y','y'],['y','y','y']]),
-				'down':  new Matrix([['o','o','o'],['o','o','o'],['o','o','o']]),
-				'left':  new Matrix([['w','w','w'],['w','w','w'],['w','w','w']]),
+				'up':    new Matrix([['o','o','o'],['o','o','o'],['o','o','o']]),
+				'down':  new Matrix([['r','r','r'],['r','r','r'],['r','r','r']]),
+				'left':  new Matrix([['y','y','y'],['y','y','y'],['y','y','y']]),
 				'front': new Matrix([['b','b','b'],['b','b','b'],['b','b','b']])
 			});
 
 			$(window).load(function(){
 				$('#cube').replaceWith(rubiks.html());
-				rubiks.turn('front',2);
+				rubiks.move('f2,l1');
 				$('#cube').replaceWith(rubiks.html());
 			});
 		</script>
