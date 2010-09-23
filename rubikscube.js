@@ -6,7 +6,8 @@
     Copyright 2010 Tom de Grunt.
 */
 
-/*
+/**
+ * @class Matrix
  * Simple Matrix implementation
  */
 var Matrix = function(elements) {
@@ -15,6 +16,7 @@ var Matrix = function(elements) {
 
 Matrix.prototype = {
   /**
+   * @method Matrix.setElements
    * Sets the elements of the Matrix
    * @param {Array} elements
    * @api public
