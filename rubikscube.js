@@ -1,3 +1,11 @@
+/* 
+    rubikscube.js
+    rubikscube-javascript
+  
+    Created by Tom de Grunt on 2010-09-23.
+    Copyright 2010 Tom de Grunt.
+*/
+
 /*
  * Simple Matrix implementation
  */
@@ -6,12 +14,23 @@ var Matrix = function(elements) {
 };
 
 Matrix.prototype = {
+  /**
+   * Sets the elements of the Matrix
+   * @param {Array} elements
+   * @api public
+   */
 	setElements: function(elements) {
 		this.elements = elements;
 	},
+	/**
+	 * Retrieve element at row y, column x
+	 */
 	e: function(y,x) {
 		return this.elements[y][x];
 	},
+	/**
+	 * Returns column x of the Matrix
+	 */
 	getCol: function(x) {
 		var col = [];
 		for(var i=0;i<this.elements.length;i++) {
