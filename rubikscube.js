@@ -1,6 +1,10 @@
+/*
+ * Simple Matrix implementation
+ */
 var Matrix = function(elements) {
 	this.elements = elements;
 };
+
 Matrix.prototype = {
 	setElements: function(elements) {
 		this.elements = elements;
@@ -28,6 +32,9 @@ Matrix.prototype = {
 	}
 };
 
+/*
+ * Cube implementation
+ */
 var Cube = function(faces) {
 	this.faces = faces;
 	this.short = { 'l': 'left',	'r': 'right',	'u': 'up', 'd': 'down',	'f': 'front',	'b': 'back'	};

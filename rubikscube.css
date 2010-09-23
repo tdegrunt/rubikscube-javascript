@@ -1,49 +1,52 @@
-body {
-	background: #fff;
-	font-family: helvetica;
-	font-size: 9px;
-}
-
+/* cube itself */
 .cube {
   position: absolute;
   top: 100px;
   left: 100px;
 }
 
+/* faces */
 .fc {
   overflow: hidden;
 }			
 
+/* up face */
 .fc.u {
   -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
   -moz-transform: rotate(-45deg) skew(15deg, 15deg);
 }
 
+/* left face */
 .fc.l {
   -webkit-transform: rotate(15deg) skew(15deg, 15deg);
   -moz-transform: rotate(15deg) skew(15deg, 15deg);
 }
 
+/* front face */
 .fc.f {
   -webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
   -moz-transform: rotate(-15deg) skew(-15deg, -15deg);
 }
 
+/* down face */
 .fc.d {
   -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
   -moz-transform: rotate(-45deg) skew(15deg, 15deg);
 }	
 		
+/* back face */
 .fc.b {
   -webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
   -moz-transform: rotate(-15deg) skew(-15deg, -15deg);
 }
 
+/* right face */
 .fc.r {
   -webkit-transform: rotate(15deg) skew(15deg, 15deg);
   -moz-transform: rotate(15deg) skew(15deg, 15deg);
 }
 
+/* cubelets */
 .c {
 	position: absolute;
 	width: 25px;
