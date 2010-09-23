@@ -105,11 +105,27 @@ Cube.prototype = {
 				for(var i=actions.length-1;i>=0;i--) {
 					this.set(actions[i], (i-1>=0) ? this.get(actions[i-1]) : dup);
 				}
+
+				// TODO: Needs a cleanup 
+				var dup = this.faces[face].getCol(2);
+				this.faces[face].setCol(2,this.faces[face].getRow(2));
+				this.faces[face].setRow(2,this.faces[face].getCol(0));
+				this.faces[face].setCol(0,this.faces[face].getRow(0).reverse());
+				this.faces[face].setRow(0,dup);
+				
 			} else {
 				var dup = this.get(actions[0]);
 				for(var i=0;i<actions.length;i++) {
 					this.set(actions[i], (i+1<actions.length) ? this.get(actions[i+1]) : dup);
 				}
+				
+				// TODO: Needs a cleanup 
+				var dup = this.faces[face].getRow(0);
+				this.faces[face].setRow(0,this.faces[face].getCol(0).reverse());
+				this.faces[face].setCol(0,this.faces[face].getRow(2));
+				this.faces[face].setRow(2,this.faces[face].getCol(2).reverse());
+				this.faces[face].setCol(2,dup);
+				
 			}
 		}
 	},
