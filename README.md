@@ -27,9 +27,9 @@ The below example depends on jQuery, but the library is completely stand-alone.
 			$('#cube').replaceWith(rubiks.html());
 		});
 
-## rubikscube-javascript
+## License
 
-barcode is licensed under MIT license.
+rubikscube-javascript is licensed under MIT license.
 
 	Copyright (C) 2012 Tom de Grunt <tom@degrunt.nl>
 
